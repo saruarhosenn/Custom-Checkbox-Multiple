@@ -1,0 +1,166 @@
+
+*,
+*::after,
+*::before {
+	margin: 0;
+	padding: 0;
+	-webkit-box-sizing: border-box;
+	        box-sizing: border-box;
+}
+
+body {
+	font-family: sans-serif;
+}
+
+h1 {
+	text-align: center;
+	text-transform: uppercase;
+}
+
+.wrapper {
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-ms-flex-wrap: wrap;
+	    flex-wrap: wrap;
+	-webkit-box-pack: center;
+	    -ms-flex-pack: center;
+	        justify-content: center;
+}
+
+/*=======================*/
+/*----- CHECK BOX 1 -----*/
+/*=======================*/
+/* The container */
+.check__main {
+	display: inline-block;
+	position: relative;
+	padding-left: 35px;
+	margin-bottom: 12px;
+	cursor: pointer;
+	font-size: 22px;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+
+.check__main:not(:last-child) {
+	margin-right: 25px;
+}
+
+/* Hide the browser's default checkbox */
+.check__main input {
+	position: absolute;
+	opacity: 0;
+	cursor: pointer;
+	height: 0;
+	width: 0;
+}
+
+/* Create a custom checkbox */
+.checkmark {
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 25px;
+	width: 25px;
+	background-color: #eee;
+}
+
+/* On mouse-over, add a grey background color */
+.check__main:hover input ~ .checkmark {
+	background-color: #ccc;
+}
+
+/* When the checkbox is checked, add a blue background */
+.check__main input:checked ~ .checkmark {
+	background-color: #2196F3;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark::after {
+	content: "";
+	position: absolute;
+	display: none;
+}
+
+/* Show the checkmark when checked */
+.check__main input:checked ~ .checkmark:after {
+	display: block;
+}
+
+/* Style the checkmark/indicator */
+.check__main .checkmark::after {
+	left: 9px;
+	top: 5px;
+	width: 7px;
+	height: 12px;
+	border: solid white;
+	border-width: 0 3px 3px 0;
+	-webkit-transform: rotate(45deg);
+	-ms-transform: rotate(45deg);
+	transform: rotate(45deg);
+}
+
+/*=======================*/
+/*----- CHECK BOX 2 -----*/
+/*=======================*/
+.custom_checkbox:first-child {
+	margin-right: 25px;
+}
+
+.custom_checkbox input {
+	padding: 0;
+	height: initial;
+	width: initial;
+	display: none;
+	cursor: pointer;
+}
+
+.custom_checkbox label {
+	position: relative;
+	cursor: pointer;
+	color: #000000;
+	font-size: 20px;
+}
+
+.custom_checkbox label:before {
+	content: '';
+	background-color: transparent;
+	border: 2px solid #ddd;
+	padding: 12px;
+	border-radius: 5px;
+	display: inline-block;
+	position: relative;
+	vertical-align: middle;
+	cursor: pointer;
+	margin-right: 15px;
+	-webkit-transition: background-color 0.3s ease-in-out;
+	-o-transition: background-color 0.3s ease-in-out;
+	transition: background-color 0.3s ease-in-out;
+}
+
+.custom_checkbox input:checked + label::after {
+	content: '';
+	display: block;
+	position: absolute;
+	top: 3px;
+	left: 9px;
+	width: 8px;
+	height: 14px;
+	border: solid #fff;
+	border-width: 0 2px 2px 0;
+	-webkit-transform: rotate(45deg);
+	    -ms-transform: rotate(45deg);
+	        transform: rotate(45deg);
+}
+
+.custom_checkbox input:checked + label::before {
+	content: '';
+	background-color: #00b665;
+	border-color: #00b665;
+}
