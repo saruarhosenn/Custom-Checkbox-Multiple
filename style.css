@@ -47,7 +47,7 @@ h1 {
 	-moz-user-select: none;
 	-ms-user-select: none;
 	user-select: none;
-	margin: 0 13px;
+	margin: 13px;
 }
 
 /* Hide the browser's default checkbox */
@@ -108,7 +108,7 @@ h1 {
 /*----- CHECK BOX 2 -----*/
 /*=======================*/
 .custom_checkbox {
-	margin: 0 13px;
+	margin: 13px;
 }
 
 .custom_checkbox input {
